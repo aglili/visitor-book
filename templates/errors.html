@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Error - Visitor Book</title>
+    <link href="{{ url_for('static', path='style.css') }}" rel="stylesheet">
+    <style>
+        .error-message {
+            color: #721c24;
+            background-color: #f8d7da;
+            border: 1px solid #f5c6cb;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .back-link {
+            display: inline-block; 
+            margin-top: 20px;
+            padding: 8px 15px;
+            background-color: #007bff;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+        .back-link:hover {
+            background-color: #0056b3; 
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 style="color: #dc3545;">Oops! Something Went Wrong</h1>
+
+        <hr>
+
+        <p>We're sorry, but we encountered an error processing your request.</p>
+
+        {% if detail %}
+            <div class="error-message">
+                <strong>Details:</strong> {{ detail }}
+            </div>
+        {% else %}
+             <div class="error-message">
+                An unspecified error occurred.
+            </div>
+        {% endif %}
+
+
+        <p>Please try again later. If the problem persists, you may want to contact the site administrator.</p>
+
+        <a href="{{ url_for('/') }}" class="back-link">Return to Homepage</a>
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+/* static/style.css */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f7f6;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+}
+
+.container {
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #0056b3; /* A nice blue */
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+h2 {
+    color: #17a2b8; /* A teal color */
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 8px;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: #dee2e6;
+    margin: 30px 0;
+}
+
+/* Form Styling */
+.visitor-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between form elements */
+    margin-bottom: 20px;
+}
+
+.visitor-form label {
+    font-weight: bold;
+    margin-bottom: -5px; /* Adjust spacing */
+    color: #495057;
+}
+
+.visitor-form input[type="text"] {
+    padding: 12px;
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.visitor-form input[type="text"]:focus {
+    border-color: #80bdff;
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.visitor-form button {
+    padding: 12px 20px;
+    background-color: #28a745; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    align-self: flex-start; /* Align button to the start */
+}
+
+.visitor-form button:hover {
+    background-color: #218838; /* Darker green */
+}
+
+/* Visitor List Styling */
+.visitor-list {
+    margin-top: 20px;
+}
+
+.visitor-list ul {
+    list-style: none; /* Remove default bullets */
+    padding: 0;
+}
+
+.visitor-list li {
+    background-color: #e9ecef;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    border-radius: 5px;
+    border-left: 5px solid #17a2b8; /* Teal accent border */
+}
+
+.visitor-list p {
+    color: #6c757d;
+    font-style: italic;
+}
