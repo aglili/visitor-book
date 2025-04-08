@@ -49,7 +49,7 @@ async def root(request: Request, db: Session = Depends(get_db)):
             exc_info=True
         )
         return templates.TemplateResponse(
-            "error.html",
+            "errors.html",
             {"request": request, "detail": "Could not retrieve visitors."},
             status_code=500
         )
@@ -59,7 +59,7 @@ async def root(request: Request, db: Session = Depends(get_db)):
             exc_info=True
         )
          return templates.TemplateResponse(
-            "error.html",
+            "errors.html",
             {"request": request, "detail": "An unexpected error occurred."},
             status_code=500
         )
